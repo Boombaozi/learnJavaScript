@@ -9,5 +9,5 @@ while (true){
     }
 
 }
-console.log("产度为"+b.length);
+console.log("长度为"+b.length);
 console.log(b);
