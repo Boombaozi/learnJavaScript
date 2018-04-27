@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!-- HTML结构 -->
+<p id="js">JavaScript</p>
+
+<div id="list">
+    <p id="java">Java</p>
+    <p id="python">Python</p>
+    <p id="scheme">Scheme</p>
+</div>
+
+</body>
+<script>
+     //将一个节点移到另一个里面
+    var   js = document.getElementById('js'),
+        list = document.getElementById('list');
+    list.appendChild(js);
+
+     //添加一个新节点
+     var
+         list = document.getElementById('list'),
+         h= document.createElement('p');
+     h.id = 'haskell';
+     h.innerText = 'Haskell';
+     list.appendChild(h);
+
+
+</script>
+</html>

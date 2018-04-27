@@ -6,5 +6,49 @@
 </head>
 <body>
 
+<dl id="drink-menu" style="border:solid 1px #ccc;padding:6px;">
+    <dt>摩卡</dt>
+    <dd>热摩卡咖啡</dd>
+    <dt>酸奶</dt>
+    <dd>北京老酸奶</dd>
+    <dt>果汁</dt>
+    <dd>鲜榨苹果汁</dd>
+</dl>
+
+<dl id="drink-menu2" style="border:solid 1px #ccc;padding:6px;">
+    <dt>摩卡2</dt>
+    <dd>热摩卡咖啡2</dd>
+    <dt>酸奶2</dt>
+    <dd>北京老酸奶2</dd>
+    <dt>果汁2</dt>
+    <dd>鲜榨苹果汁2</dd>
+</dl>
+
 </body>
+<script>
+
+    // 改变文档标题内容
+    document.title = '复习JavaScript';
+
+    //获取文档为某个id的一段html
+    var menu = document.getElementById('drink-menu');
+    console.log(menu);
+
+    //获取里面的<dt></dt>
+    drinks = menu.getElementsByTagName('dt');
+    //循环取出数组里的内容
+    s = 'my ';
+    for (i = 0; i < drinks.length; i++) {
+        s = s + drinks[i].innerHTML + ',';
+    }
+    //输出
+    console.log(s);
+
+
+    //Cookie
+    menu = document.cookie;
+    console.log("cookie" + menu);
+
+
+</script>
 </html>

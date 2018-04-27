@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!-- HTML结构 -->
+<div id="test-div">
+    <div class="c-red">
+        <p id="test-p">JavaScript</p>
+        <p>Java</p>
+    </div>
+    <div class="c-red c-green">
+        <p>Python</p>
+        <p>Ruby</p>
+        <p>Swift</p>
+    </div>
+    <div class="c-green">
+        <p>Scheme</p>
+        <p>Haskell</p>
+    </div>
+</div>
+</body>
+
+<script>
+    var a=document.getElementById('test-p');
+    console.log("获取 test-p"+a);
+
+    var arr=document.getElementsByClassName('c-red');
+
+    for (var i = 0; i <arr.length ; i++) {
+      console.log(arr[i]);
+    }
+
+
+</script>
+</html>
