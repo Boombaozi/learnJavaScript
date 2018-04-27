@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<form role="form" action="/users/login" method="post">
+
+    <input  id="email" class="form-control" placeholder="账号" name="username" type="text" autofocus>
+
+    <input class="form-control" placeholder="密码" name="password" type="password" value="">
+
+    <input id="jizhu" name="remember" type="checkbox" value="Remember Me">记住密码
+
+
+    <input type="submit" class="btn btn-primary" value="登录">
+    <a th:href="@{'/users/register'}">注册</a>
+
+
+    <input type="checkbox" value="checkbox">
+
+
+    <select>选择</select>
+    <input type="hidden">
+
+</form>
+
+
+<div id="1">
+
+
+</div>
+</body>
+<script>
+    //     文本框，对应的<input type="text">，用于输入文本；
+    //
+    // 口令框，对应的<input type="password">，用于输入口令；
+    //
+    // 单选框，对应的<input type="radio">，用于选择一项；
+    //
+    // 复选框，对应的<input type="checkbox">，用于选择多项；
+    //
+    // 下拉框，对应的<select>，用于选择一项；
+    //
+    // 隐藏文本，对应的<input type="hidden">，用户不可见，但表单提交时会把隐藏文本发送到服务器。
+    //
+    var input = document.getElementById('email');
+   var a= document.getElementById('1');
+   console.log(a.value);
+   a.innerText=input.value;
+
+   var check=document.getElementById('jizhu');
+   console.log(check.checked);
+     a.innerText=check.checked;
+
+</script>
+</html>

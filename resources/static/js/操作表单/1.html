@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form id="test-register" action="#" target="_blank" onsubmit="return checkRegisterForm()">
+    <p id="test-error" style="color:red"></p>
+    <p>
+        用户名: <input type="text" id="username" name="username">
+    </p>
+    <p>
+        口令: <input type="password" id="password" name="password">
+    </p>
+    <p>
+        重复口令: <input type="password" id="password2">
+    </p>
+    <p>
+        <button  type="submit">提交</button> <button type="reset">重置</button>
+    </p>
+</form>
+<div id="a" hidden class="alert alert-dismissible alert-danger">
+    <button type="button" class="close" data-dismiss="alert">&times;</button>
+    <strong>Oh snap!</strong> <a href="#" class="alert-link">Change a few things up</a> and try submitting again.
+</div>
+
+</body>
+<script>
+
+   var  checkRegisterForm = function () {
+        var a=document.getElementById("password");
+        var b=document.getElementById("password2");
+
+        if(a.value!=b.value){
+          var a1 =  document.getElementById("a");
+           a1.hidden=false;
+           var aaa=document.getElementById("test-register");
+             reset(aaa);
+            console.log("两次密码不一致");
+            return false;
+
+        }
+        else {
+            console.log("两次密码相同");
+            return true;
+
+        }
+    }
+
+</script>
+</html>
