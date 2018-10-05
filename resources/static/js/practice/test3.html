@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form id="2">
+    <input type="text" name="aa" >
+    <input type="text" name="bb">
+
+    <button id="1"> ddd</button>
+
+</form>
+</body>
+<script>
+    document.getElementById("1").click(function () {
+        var wc = window.confirm("确定要提交试卷吗？");
+        if (wc == true) {
+            $("#2").submit();
+            $('#2').hide();
+        } else {
+            return false;
+        }
+    });
+</script>
+</html>

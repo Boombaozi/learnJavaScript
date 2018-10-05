@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!-- HTML结构 -->
+<div id="test-jquery">
+    <p id="para-1" class="color-red">JavaScript</p>
+    <p id="para-2" class="color-green">Haskell</p>
+    <p class="color-red color-green">Erlang</p>
+    <p name="name" class="color-black">Python</p>
+    <form class="test-form" target="_blank" action="#0" onsubmit="return false;">
+        <legend>注册新用户</legend>
+        <fieldset>
+            <p><label>名字: <input name="name"></label></p>
+            <p><label>邮件: <input name="email"></label></p>
+            <p><label>口令: <input name="password" type="password"></label></p>
+            <p><button type="submit">注册</button></p>
+        </fieldset>
+    </form>
+</div>
+
+<!-- HTML结构 -->
+<ul id="test-ul">
+    <li class="js">JavaScript</li>
+    <li name="book">Java &amp; JavaScript</li>
+</ul>
+
+
+</body>
+<script src="jquery-3.1.1.min.js"></script>
+<script>
+    var j1=$('form input[name=name]').html();
+    var j2=$('form input[name=name]').text();
+    console.log(j1);
+    console.log(j2);
+
+
+
+    var j3=  $('#test-ul li[name=book]').text(); // 'Java & JavaScript'
+    var j4=  $('#test-ul li[name=book]').html(); // 'Java &amp; JavaScript'
+    console.log(j3);
+    console.log(j4);
+
+    var i1=  $('#test-ul li[name=book]');
+    i1.text("粗存存储错错");
+</script>
+
+</html>

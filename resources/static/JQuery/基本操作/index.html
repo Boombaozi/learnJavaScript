@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="div1">
+    <h1 id="p1">标题</h1>
+    <p class="class1" id="p2">测试内容1</p>
+    <p class="class2" id="p3">测试内容2</p>
+    <p class="class1 class2" id="p4">测试内容3</p>
+    <p class="class1 class2" id="p5">测试内容4</p>
+    <p id="p6">测试内容5</p>
+    <p id="p7">测试内容6</p>
+</div>
+<!-- HTML结构 -->
+<div id="test-jquery">
+    <p id="para-1" class="color-red">JavaScript</p>
+    <p id="para-2" class="color-green">Haskell</p>
+    <p class="color-red color-green">Erlang</p>
+    <p name="name" class="color-black">Python</p>
+    <form class="test-form" target="_blank" action="#0" onsubmit="return false;">
+        <legend>注册新用户</legend>
+        <fieldset>
+            <p><label>名字: <input name="name"></label></p>
+            <p><label>邮件: <input name="email"></label></p>
+            <p><label>口令: <input name="password" type="password"></label></p>
+            <p><button type="submit">注册</button></p>
+        </fieldset>
+    </form>
+</div>
+</body>
+<script src="jquery-3.1.1.min.js">
+
+
+</script>
+<script>
+    console.log("js开始执行");
+
+    //按id查找
+    var div = $('#div1');    // jQuery对象
+    var divDom = div.get(0); // 假设存在div，获取第1个DOM元素
+
+    console.log("按id查找" + div.get(0));
+
+    var another = $(divDom); // 重新把DOM包装为jQuery对象
+    console.log(another.get(0));
+
+
+    //按tag查 ,按tag查找只需要写上tag名称就可以了：
+    var tag = $('p');
+    console.log("按tag查找");
+    for (var i = 0; i < tag.length; i++) {
+        console.log(tag.get(i));
+    }
+
+
+    //按class查找
+    //按class查找注意在class名称前加一个.：
+
+    var a = $('.calss1'); // 所有节点包含`class="red"`都将返回
+    console.log("按class查找");
+    for (var i = 0; i < a.length; i++) {
+        console.log(a.get(i));
+    }
+
+
+    //通常很多节点有多个class，我们可以查找同时包含red和green的节点：
+    var myclass = $('.class1.class2');
+    for (var i = 0; i < myclass.length; i++) {
+        console.log(myclass.get(i));
+    }
+    //var a = $('.red.green'); // 注意没有空格！
+    // 符合条件的节点：
+    // <div class="red green">...</div>
+    // <div class="blue green red">...</div>
+
+
+
+    // 按属性查找
+    // 一个DOM节点除了id和class外还可以有很多属性，很多时候按属性查找会非常方便，比如在一个表单中按属性来查找：
+
+    var email = $('[name=email]'); // 找出<??? name="email">
+    console.log(email.get(0));
+     var passwordInput = $('[type=password]'); // 找出<??? type="password">
+    console.log(passwordInput.get(0));
+
+    // var a = $('[items="A B"]'); // 找出<??? items="A B">
+    //当属性的值包含空格等特殊字符时，需要用双引号括起来。
+
+    //按属性查找还可以使用前缀查找或者后缀查找：
+
+    //var icons = $('[name^=icon]'); // 找出所有name属性值以icon开头的DOM
+    // 例如: name="icon-1", name="icon-2"
+    // var names = $('[name$=with]'); // 找出所有name属性值以with结尾的DOM
+    // 例如: name="startswith", name="endswith"
+
+</script>
+</html>
